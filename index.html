@@ -18,25 +18,27 @@
 
     </div>
 
-
     <script>
+
+        const btn = document.createElement('button')
+        btn.innerText = 'Click 5'
+        const div = document.querySelector('.wrapper')
+        btn.dataset.num = '5'
+        btn.className = 'btn'
+        btn.classList.add('newBtn')
+        div.appendChild(btn)
+
 
         const buttons = document.querySelectorAll('.btn')
         console.log(buttons);
 
-        // event object ! the single par in eventListener
         const handleClick = (event) => {
-            // console.log(parseInt(event.target.dataset.num))
             console.log(event.target.textContent)
         }
 
         buttons.forEach(btn => {
             btn.addEventListener('click', handleClick)
         })
-
-
-
-
 
     </script>
     
