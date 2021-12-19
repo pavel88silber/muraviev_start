@@ -1,0 +1,9 @@
+body{
+    background-color: green;
+}
+
+button{
+    background-color: hotpink;
+    color: #000;
+    border-radius: 21%;
+}
