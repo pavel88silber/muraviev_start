@@ -55,18 +55,25 @@ appendKid = (data) => {
 const bears = fetch('https://api.sampleapis.com/beers/ale')
 .then(res => res.json())
 .then(data => {
+    
     // console.log(data)
 
 
-    for (let i = 0; i < 3; ) {
+    for (let i = 0; i < 11; ) {
         // console.log(data[i].name)
-        tr.appendChild(document.createElement('td')).innerText = (data[i].name)
+        table.appendChild(document.createElement('tr')).innerText = (data[i].name)
         i++
-        table.appendChild(tr)
+        // table.appendChild(tr)
         // appendKid(data[i].name)
         }
     }
 
-)
+    )
 
+    function displayData(data) {
+        document.querySelector("pre").innerHTML = JSON.stringify(data, null, 2);
+    }
+    
+    displayData(data)
+    
 
